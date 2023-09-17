@@ -5,6 +5,7 @@ const releaseDateTraits = ["2001-2007", "2016-2023"];
 const seriesTraits = ["Camelot", "Demon Slayer", "Dorgeshuun", "Dragonkin", "Elemental Workshop", "Elf", "Fairytale", "Fremennik", "Gnome", "Great Kourend", "Kharidian", "Mahjarrat", "Miscellania", "Myreque"];
 const skillRequirementTraits = ["Attack", "Strength", "Defence", "Ranged", "Prayer", "Magic", "Runecraft", "Hitpoints", "Crafting", "Mining", "Smithing", "Fishing", "Cooking", "Firemaking", "Woodcutting", "Agility", "Herblore", "Thieving", "Fletching", "Slayer", "Farming", "Construction", "Hunter"];
 const membershipTraits = ["F2P", "Members"];
+const allTraits = difficultyTraits.concat(releaseDateTraits, seriesTraits, skillRequirementTraits, membershipTraits);
 
 // Quest and trait list
 
@@ -26,5 +27,13 @@ let quests = [
     }
 ]
 
-console.log(quests[1].skillRequirements.includes("Agility"))
-console.log(membershipTraits.length)
+// console.log(quests[1].skillRequirements.includes("Agility"))
+let traitA = ""
+
+function traitCombo(){
+    traitA = allTraits[Math.floor(Math.random() * allTraits.length)]
+    return traitA;
+}
+
+console.log(traitCombo());
+console.log(traitA)
