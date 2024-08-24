@@ -1,11 +1,41 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script>
+    <title>Quest Grid Game</title>
+    <script src="script.js" defer></script>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 10px;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .grid-item {
+            background-color: lightgray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            cursor: pointer;
+            border: 2px solid black;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="grid-container">
+        <div class="grid-item" id="A1-B1">A1-B1</div>
+        <div class="grid-item" id="A2-B1">A2-B1</div>
+        <div class="grid-item" id="A3-B1">A3-B1</div>
+        <div class="grid-item" id="A1-B2">A1-B2</div>
+        <div class="grid-item" id="A2-B2">A2-B2</div>
+        <div class="grid-item" id="A3-B2">A3-B2</div>
+        <div class="grid-item" id="A1-B3">A1-B3</div>
+        <div class="grid-item" id="A2-B3">A2-B3</div>
+        <div class="grid-item" id="A3-B3">A3-B3</div>
+    </div>
 </body>
 </html>
